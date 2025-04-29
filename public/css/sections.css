@@ -1,0 +1,6 @@
+.sections{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top right, #9FB3DF, #FFD0C7);
+}
