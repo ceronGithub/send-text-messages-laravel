@@ -5,7 +5,7 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
-                <h1>Create text message</h1>
+                <h1>Send message via sms</h1>
             </div>
             <div class="card-body">
                 <ul>
@@ -25,8 +25,10 @@
             <div class="card-body">
                 <ul>
                     <li>composer require twilio/skd</li>
-                    <li>display : <a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=inline">tutorial</a></li>
-                    <li>check the .env</li>
+                    <li><a href="https://www.youtube.com/watch?v=0c7296VxnWY&t=519s">Tutorial</a></li>
+                    <li>twilio website: <a href="https://www.twilio.com/en-us/messaging?cq_plac=&cq_net=g&cq_pos=&cq_med=&cq_plt=gp&utm_source=google&utm_medium=cpc&utm_term=twilio&utm_campaign=G_S_APAC_Brand_Brand_EN_PH_Exact&gad_source=1&gbraid=0AAAAADcHgwUgEj3vntGhw8cTcxtCWwrWC&gclid=Cj0KCQjwlMfABhCWARIsADGXdy__Xyfgc-88adAeSGeXUMUfaTpT7fXpUYGy-eyNTMbfLp25W4tRDSIaAlsdEALw_wcB">website_link</a></li>
+                    <li hidden>uname: ceroncalsena@gmail.com</li>
+                    <li hidden>pass: M@y121997</li>
                 </ul>
             </div>
         </div>
@@ -87,7 +89,7 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
-                <h1>Create text message</h1>
+                <h1>Booking schedule</h1>
             </div>
             <div class="card-body">            
                 <ul>
@@ -102,6 +104,40 @@
             <div class="card-body">
                 <ul>
                     <li><a href="https://stackoverflow.com/questions/73357843/how-to-disable-array-of-date-from-date-input-in-html">Article</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sections">
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header">
+                <h1>Send message to gmail</h1>
+            </div>
+            <div class="card-body">
+                <form action="{{route('mail-sent.data')}}" method="post">
+                @csrf
+                    <ul>
+                        <li>Email</li>
+                        <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>
+                        <br>
+                        <li>Message:</li>
+                        <li><textarea class="txtField" placeholder="what is your message?" name="message" required></textarea></li>                                                    
+                    </ul> 
+                    <button class="subBtn" type="submit">Send</button>  
+                </form>                        
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Commands</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=PeK_tD4T3Og">tutorial</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=lsna1S8y1vg">tutorial-stmp</a></li>
                 </ul>
             </div>
         </div>

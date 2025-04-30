@@ -7,6 +7,9 @@ use App\Notifications\ExampleNotification;
 use App\Notifications\TelegramCrisNotification;
 
 use App\Http\Controllers\BookingController;
+use App\Mail\TrialMail;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +35,9 @@ Route::post('/form-submit', function(){
 
 Route::get('/bookingpage', [BookingController::class, 'index'])->name('booking-page.page');
 Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creation.data');
+
+Route::post('/mail-sent', function () {
+    Mail::to('developerceron@gmail.com')->send(new TrialMail());
+    return redirect()->back();
+})->name('mail-sent.data');
+ 
