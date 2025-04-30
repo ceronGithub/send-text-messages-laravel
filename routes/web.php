@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Notification;
 
 use App\Notifications\ExampleNotification;
+use App\Notifications\TelegramCrisNotification;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/', function () {
 
 Route::post('/form-submit', function(){
     // dd(request()->all());
-    Notification::route('telegram', '5690477490')->notify(new ExampleNotification);
-    // Notification::route('telegram', '6696261691')->notify(new ExampleNotification);    
-    return view('welcome');
+    Notification::route('telegram', '6696261691')->notify(new TelegramCrisNotification);
+    Notification::route('telegram', '5690477490')->notify(new ExampleNotification);        
+    return redirect()->back();
 });

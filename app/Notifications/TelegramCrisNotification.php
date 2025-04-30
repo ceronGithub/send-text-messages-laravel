@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 use NotificationChannels\Telegram\TelegramChannel;
 use NotificationChannels\Telegram\TelegramMessage;
 
-class ExampleNotification extends Notification
+class TelegramCrisNotification extends Notification
 {
     use Queueable;
 
@@ -43,8 +43,8 @@ class ExampleNotification extends Notification
     public function toTelegram($notifiable)
     {
         $request = request()->all();
-        try{
-            return TelegramMessage::create()->to('5690477490')->content($request['message']);            
+        try{            
+            return TelegramMessage::create()->to('6696261691')->content($request['message']);
         }
         catch(\Exception $ex)
         {

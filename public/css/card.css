@@ -42,6 +42,15 @@
     transform: translate(-50%, -50%); 
 }
 
+.card-body-commands ul{
+    position: absolute;
+    text-decoration: none;
+    list-style-type: none;
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
 .card-body input.field{
     border-radius: 8px;
     height: 30px;
