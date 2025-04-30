@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('css/general.css') }}">
         <link rel="stylesheet" href="{{ asset('css/sections.css') }}">
         <link rel="stylesheet" href="{{ asset('css/card.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/card-booking.css') }}">
         
     </head>
     <body>

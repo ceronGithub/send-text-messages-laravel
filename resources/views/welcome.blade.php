@@ -89,17 +89,10 @@
             <div class="card-header">
                 <h1>Create text message</h1>
             </div>
-            <div class="card-body">
-                <form action="">
-                    <ul>
-                        <li>Pick Date:</li>
-                        <li><input type="date" class="field" placeholder="Enter number"></li>
-                        <br>
-                        <li>Text Message:</li>
-                        <li><textarea class="txtField" placeholder="what is your message?"></textarea></li>                                                    
-                    </ul> 
-                    <button class="subBtn" type="submit">Send</button>
-                </form>                          
+            <div class="card-body">            
+                <ul>
+                    <li><a href="{{ route('booking-page.page') }}">Booking page</a></li>
+                </ul>        
             </div>
         </div>
         <div class="card">
@@ -108,9 +101,7 @@
             </div>
             <div class="card-body">
                 <ul>
-                    <li>composer require twilio/skd</li>
-                    <li>display : <a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=inline">tutorial</a></li>
-                    <li>check the .env</li>
+                    <li><a href="https://stackoverflow.com/questions/73357843/how-to-disable-array-of-date-from-date-input-in-html">Article</a></li>                    
                 </ul>
             </div>
         </div>

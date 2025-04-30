@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Notification;
 use App\Notifications\ExampleNotification;
 use App\Notifications\TelegramCrisNotification;
 
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +18,10 @@ use App\Notifications\TelegramCrisNotification;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',
+ function () {
     return view('welcome');
-});
+})->name('home.page');
 
 Route::post('/form-submit', function(){
     // dd(request()->all());
@@ -27,3 +29,6 @@ Route::post('/form-submit', function(){
     Notification::route('telegram', '5690477490')->notify(new ExampleNotification);        
     return redirect()->back();
 });
+
+Route::get('/bookingpage', [BookingController::class, 'index'])->name('booking-page.page');
+Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creation.data');
