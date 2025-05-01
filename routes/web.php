@@ -8,6 +8,7 @@ use App\Notifications\TelegramCrisNotification;
 
 use App\Http\Controllers\BookingController;
 use App\Mail\TrialMail;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -21,8 +22,7 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-Route::get('/',
- function () {
+Route::get('/', function () {    
     return view('welcome');
 })->name('home.page');
 
@@ -37,7 +37,12 @@ Route::get('/bookingpage', [BookingController::class, 'index'])->name('booking-p
 Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creation.data');
 
 Route::post('/mail-sent', function () {
-    Mail::to('developerceron@gmail.com')->send(new TrialMail());
+    // dd(request(['email']));  
+    Config::set('app.mail.username' , request()->email);
+    Config::set('app.mail.password', request()->appsPasscode);
+    dd(env('MAIL_USERNAME')); 
+    Mail::to(request()->email)->send(new TrialMail());
+    // Mail::to(request()->email)->send(new TrialMail());
     return redirect()->back();
 })->name('mail-sent.data');
  

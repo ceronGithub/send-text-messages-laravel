@@ -28,6 +28,7 @@ class TrialMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.hello');
+        return $this->view('mail.hello')
+                    ->subject('Greetings owner a new client has been booked.');                    
     }
 }

@@ -5,6 +5,43 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
+                <h1>Send message to gmail</h1>
+            </div>
+            <div class="card-body">
+                <form action="{{route('mail-sent.data')}}" method="post">
+                @csrf
+                    <ul>
+                        <li>Email</li>
+                        <li><input type="email" class="field" placeholder="Enter email" name="email" value="ceroncalsena@gmail.com"></li>
+                        <br>
+                        <li>Apps Password: (16 character)</li>
+                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" value="txyzndlslwtkeeul"></li>                                                                           
+                    </ul> 
+                    <button class="subBtn" type="submit">Send</button>  
+                </form>                        
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Commands</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=PeK_tD4T3Og">tutorial</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=F1NPG3nKxrQ">Tutorial-1</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=lsna1S8y1vg">tutorial-stmp</a></li>
+                    <li><a href="https://stackoverflow.com/questions/43040967/accessing-laravel-env-variables-in-blade">article_how_to_pass_data_from_blade_to_.env</a></li>
+                    <li> php artisan optimize:clear : if you get null everytime you call anything from env</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sections">
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header">
                 <h1>Send message via sms</h1>
             </div>
             <div class="card-body">
@@ -29,6 +66,7 @@
                     <li>twilio website: <a href="https://www.twilio.com/en-us/messaging?cq_plac=&cq_net=g&cq_pos=&cq_med=&cq_plt=gp&utm_source=google&utm_medium=cpc&utm_term=twilio&utm_campaign=G_S_APAC_Brand_Brand_EN_PH_Exact&gad_source=1&gbraid=0AAAAADcHgwUgEj3vntGhw8cTcxtCWwrWC&gclid=Cj0KCQjwlMfABhCWARIsADGXdy__Xyfgc-88adAeSGeXUMUfaTpT7fXpUYGy-eyNTMbfLp25W4tRDSIaAlsdEALw_wcB">website_link</a></li>
                     <li hidden>uname: ceroncalsena@gmail.com</li>
                     <li hidden>pass: M@y121997</li>
+                    <li><a href="https://www.youtube.com/watch?v=SonZGuM6sqQ">Tutorial</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +79,7 @@
                 <div class="card-header">
                     <h1>Create text message send to telegram</h1>
                 </div>
-                <div class="card-body" style="">
+                <div class="card-body">
                     <form action="form-submit" method="post">
                         @csrf
                         <ul>
@@ -104,40 +142,6 @@
             <div class="card-body">
                 <ul>
                     <li><a href="https://stackoverflow.com/questions/73357843/how-to-disable-array-of-date-from-date-input-in-html">Article</a></li>                    
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="sections">
-    <div class="card-group">
-        <div class="card">
-            <div class="card-header">
-                <h1>Send message to gmail</h1>
-            </div>
-            <div class="card-body">
-                <form action="{{route('mail-sent.data')}}" method="post">
-                @csrf
-                    <ul>
-                        <li>Email</li>
-                        <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>
-                        <br>
-                        <li>Message:</li>
-                        <li><textarea class="txtField" placeholder="what is your message?" name="message" required></textarea></li>                                                    
-                    </ul> 
-                    <button class="subBtn" type="submit">Send</button>  
-                </form>                        
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h1>Commands</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=PeK_tD4T3Og">tutorial</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=lsna1S8y1vg">tutorial-stmp</a></li>
                 </ul>
             </div>
         </div>
