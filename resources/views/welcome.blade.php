@@ -12,11 +12,12 @@
                 @csrf
                     <ul>
                         <li>Email</li>
-                        <li><input type="email" class="field" placeholder="Enter email" name="email" value="ceroncalsena@gmail.com"></li>
+                        <li><input type="email" class="field" placeholder="Enter email" name="email"></li>                        
                         <br>
                         <li>Apps Password: (16 character)</li>
-                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" value="txyzndlslwtkeeul"></li>                                                                           
+                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode"></li>                        
                     </ul> 
+                                                      
                     <button class="subBtn" type="submit">Send</button>  
                 </form>                        
             </div>
@@ -27,11 +28,14 @@
             </div>
             <div class="card-body">
                 <ul>
+                <li><a href="https://stackoverflow.com/questions/75015524/how-to-overwrite-env-file-variables-in-laravel">this_solved_my_problem</a></li>
+                <li><a href="https://laracasts.com/discuss/channels/laravel/problem-can-not-send-message-without-a-sender-address">this_solved_my_problem_too</a></li>
                     <li><a href="https://www.youtube.com/watch?v=PeK_tD4T3Og">tutorial</a></li>
                     <li><a href="https://www.youtube.com/watch?v=F1NPG3nKxrQ">Tutorial-1</a></li>
                     <li><a href="https://www.youtube.com/watch?v=lsna1S8y1vg">tutorial-stmp</a></li>
+                    <li><a href="https://stackoverflow.com/questions/42727510/update-env-value-via-laravel">Article</a></li>
                     <li><a href="https://stackoverflow.com/questions/43040967/accessing-laravel-env-variables-in-blade">article_how_to_pass_data_from_blade_to_.env</a></li>
-                    <li> php artisan optimize:clear : if you get null everytime you call anything from env</li>
+                    <li> php artisan optimize:clear : if you get null everytime you call anything from env</li>                    
                 </ul>
             </div>
         </div>

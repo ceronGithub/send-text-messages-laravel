@@ -7,7 +7,10 @@ use App\Notifications\ExampleNotification;
 use App\Notifications\TelegramCrisNotification;
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\MailingController;
 use App\Mail\TrialMail;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,13 +39,17 @@ Route::post('/form-submit', function(){
 Route::get('/bookingpage', [BookingController::class, 'index'])->name('booking-page.page');
 Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creation.data');
 
-Route::post('/mail-sent', function () {
-    // dd(request(['email']));  
-    Config::set('app.mail.username' , request()->email);
-    Config::set('app.mail.password', request()->appsPasscode);
-    dd(env('MAIL_USERNAME')); 
-    Mail::to(request()->email)->send(new TrialMail());
-    // Mail::to(request()->email)->send(new TrialMail());
-    return redirect()->back();
-})->name('mail-sent.data');
- 
+// Route::post('/mail-sent', function () {
+//     // dd(request(['email']));  
+//     // Config::set('app.mail.username' , request()->email);
+//     // Config::set('app.mail.password', request()->appsPasscode);    
+//     // Config::set('app.usernameMailing', request()->email);
+//     // Config::set('app.passwordMailing', request()->appsPasscode);
+//     // putenv("MAIL_USERNAME=request()->email");
+//     // putenv("MAIL_PASSWORD=request()->appsPasscode");    
+        
+//     Mail::to(request()->email)->send(new TrialMail(request()->all()));    
+//     return redirect()->back();
+// })->name('mail-sent.data');
+
+Route::post('/mail-sent', [MailingController::class, 'store'])->name('mail-sent.data');

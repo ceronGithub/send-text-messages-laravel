@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Client\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -27,7 +28,7 @@ class TrialMail extends Mailable
      * @return $this
      */
     public function build()
-    {
+    {        
         return $this->view('mail.hello')
                     ->subject('Greetings owner a new client has been booked.');                    
     }

@@ -26,7 +26,9 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),    
+    'env' => env('APP_ENV', 'production'),
+    'usernameMailing' => env('MAIL_USERNAME'),
+    'passwordMailing' => env('MAIL_PASSWORD'),  
 
     /*
     |--------------------------------------------------------------------------
