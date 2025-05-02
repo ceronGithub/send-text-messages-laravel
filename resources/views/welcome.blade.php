@@ -87,6 +87,8 @@
                     <form action="form-submit" method="post">
                         @csrf
                         <ul>
+                            <li><a href="https://t.me/PR_VH_Notification_bot?fbclid=IwY2xjawKBbjlleHRuA2FlbQIxMABicmlkETFUZHZWcE5DdjlUMmY0N1NTAR5hlxmIEEsPIm7Zxux8PH0obguuWyCZHuK7NtGVluDZ0UeR3z9mSJbWNLi8Nw_aem_gSpK7lPgb6FEqFg4UmxOvQ">Telegram-Channel</a></li>
+                            <br>
                             <li>Name:</li>
                             <li><input type="text" class="field" placeholder="Enter name" name="name" required></li>
                             <br>
