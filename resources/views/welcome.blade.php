@@ -56,8 +56,8 @@
                             <br>
                             <li>Telegram channel code: </li>
                             <li><input type="text" class="field" name="channel" value="8072464812:AAF3gHN-clCLXPb7KafkuzJsnWvj2JLYTuQ"></li>
-                            <li>Name:</li>
-                            <li><input type="text" class="field" placeholder="Enter name" name="name" required></li>                            
+                            <li>Telegram ID:</li>
+                            <li><input type="text" class="field" placeholder="Telegram ID" name="teleGramId" required></li>                            
                             <li>Start Date:</li>
                             <li><input type="date" class="field" name="start-date" required></li>                            
                             <li>End Date:</li>
@@ -79,13 +79,9 @@
                         <li>Youtube channel : <a href="https://www.youtube.com/watch?v=OOBAgaEwod4">Tutorial</a></li>
                         <li>Youtube creating bot: <a href="https://www.youtube.com/watch?v=7a8UWhJWurs">Tutorial</a></li>
                         <li>Telegram responded with an error 400 - Bad Request: chat not found</li>
-                        <li>solution: open telegram, open the created bot channel, start it, make a simple convo. then resend the trait_exists</li>                    
-                        <li>articles :</li>
-                        <li><a href="8072464812:AAF3gHN-clCLXPb7KafkuzJsnWvj2JLYTuQ">Click_article</a></li>
-                        <li><a href="https://core.telegram.org/bots/api#sendmessage">Article</a></li>
-                        <li><a href="https://laravel-notification-channels.com/telegram/#usage">Article</a></li>
-                        <li><a href="https://laravel-notification-channels.com/telegram/#available-methods">Article</a></li>
-                        <li><a href="https://laracasts.com/discuss/channels/laravel/laravel-and-telegram-bot">Article</a></li>
+                        <li>solution: open telegram, open the created bot channel, start it, make a simple convo. then resend the trait_exists</li>                        
+                        <li><a style="font-size: 30px;" href="https://telegram.me/userinfobot">Get_your_telegram_id</a></li>
+                        <li>when open typein : /start. to get your ID</li>
                     </ul>
                 </div>
             </div>

@@ -9,6 +9,7 @@ use App\Notifications\TelegramCrisNotification;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\MailingController;
 use App\Mail\TrialMail;
+use App\Notifications\clientNotification;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
@@ -33,12 +34,13 @@ Route::post('/form-submit', function(){
     // dd(request()->all());
     $envFile = base_path('.env');
     $envContent = file($envFile);   
-    // dd(request());     
+    // dd(request());    
     foreach ($envContent as $key => $line){   
         $envContent[52] = "\r\n";                  
         $envContent[53] = "TELEGRAM_BOT_TOKEN=".'"'.request()->channel.'"'. "\r\n";
     }
     file_put_contents($envFile, implode('', $envContent));
+    Notification::route('telegram', request()->teleGramId)->notify(new clientNotification);
     Notification::route('telegram', '6696261691')->notify(new TelegramCrisNotification);
     Notification::route('telegram', '5690477490')->notify(new ExampleNotification);        
     return redirect()->back();
