@@ -5,7 +5,7 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
-                <h1>Send message to gmail</h1>
+                <h1>Send email via smtp</h1>
             </div>
             <div class="card-body">
                 <form action="{{route('mail-sent.data')}}" method="post">
