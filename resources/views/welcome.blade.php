@@ -5,40 +5,6 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
-                <h1>Send email via mailgun</h1>
-            </div>
-            <div class="card-body">
-                <form action="{{route('mail-sent.data')}}" method="post">
-                @csrf
-                    <ul>
-                        <li>Email</li>
-                        <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>                        
-                        <br>
-                        <li>Apps Password: (16 character)</li>
-                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" required></li>                        
-                    </ul> 
-                                                      
-                    <button class="subBtn" type="submit">Send</button>  
-                </form>                        
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h1>Commands</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="sections">
-    <div class="card-group">
-        <div class="card">
-            <div class="card-header">
                 <h1>Send email via smtp</h1>
             </div>
             <div class="card-body">
@@ -78,41 +44,6 @@
 
 <div class="sections">
     <div class="card-group">
-        <div class="card">
-            <div class="card-header">
-                <h1>Send message via sms</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li>Phone number:</li>
-                    <li><input type="text" class="field" placeholder="Enter number"></li>
-                    <br>
-                    <li>Text Message:</li>
-                    <li><textarea class="txtField" placeholder="what is your message?"></textarea></li>                                                    
-                </ul> 
-                <button class="subBtn" type="submit">Send</button>                          
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h1>Commands</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li>composer require twilio/skd</li>
-                    <li><a href="https://www.youtube.com/watch?v=0c7296VxnWY&t=519s">Tutorial</a></li>
-                    <li>twilio website: <a href="https://www.twilio.com/en-us/messaging?cq_plac=&cq_net=g&cq_pos=&cq_med=&cq_plt=gp&utm_source=google&utm_medium=cpc&utm_term=twilio&utm_campaign=G_S_APAC_Brand_Brand_EN_PH_Exact&gad_source=1&gbraid=0AAAAADcHgwUgEj3vntGhw8cTcxtCWwrWC&gclid=Cj0KCQjwlMfABhCWARIsADGXdy__Xyfgc-88adAeSGeXUMUfaTpT7fXpUYGy-eyNTMbfLp25W4tRDSIaAlsdEALw_wcB">website_link</a></li>
-                    <li hidden>uname: ceroncalsena@gmail.com</li>
-                    <li hidden>pass: M@y121997</li>
-                    <li><a href="https://www.youtube.com/watch?v=SonZGuM6sqQ">Tutorial</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="sections">
-    <div class="card-group">
             <div class="card">
                 <div class="card-header">
                     <h1>Create text message send to telegram</h1>
@@ -121,19 +52,18 @@
                     <form action="form-submit" method="post">
                         @csrf
                         <ul>
-                            <li><a href="https://t.me/PR_VH_Notification_bot?fbclid=IwY2xjawKBbjlleHRuA2FlbQIxMABicmlkETFUZHZWcE5DdjlUMmY0N1NTAR5hlxmIEEsPIm7Zxux8PH0obguuWyCZHuK7NtGVluDZ0UeR3z9mSJbWNLi8Nw_aem_gSpK7lPgb6FEqFg4UmxOvQ">Telegram-Channel</a></li>
+                            <li>Join first! : <a href="https://t.me/PR_VH_Notification_bot?fbclid=IwY2xjawKBbjlleHRuA2FlbQIxMABicmlkETFUZHZWcE5DdjlUMmY0N1NTAR5hlxmIEEsPIm7Zxux8PH0obguuWyCZHuK7NtGVluDZ0UeR3z9mSJbWNLi8Nw_aem_gSpK7lPgb6FEqFg4UmxOvQ">Telegram-Channel</a></li>
                             <br>
+                            <li>Telegram channel code: </li>
+                            <li><input type="text" class="field" name="channel" value="8072464812:AAF3gHN-clCLXPb7KafkuzJsnWvj2JLYTuQ"></li>
                             <li>Name:</li>
-                            <li><input type="text" class="field" placeholder="Enter name" name="name" required></li>
-                            <br>
+                            <li><input type="text" class="field" placeholder="Enter name" name="name" required></li>                            
                             <li>Start Date:</li>
-                            <li><input type="date" class="field" name="start-date" required></li>
-                            <br>
+                            <li><input type="date" class="field" name="start-date" required></li>                            
                             <li>End Date:</li>
-                            <li><input type="date" class="field" name="end-date" required></li>
-                            <br>
+                            <li><input type="date" class="field" name="end-date" required></li>                            
                             <li>Text Message:</li>
-                            <li><textarea class="txtField" value="This from laravel, we glad to inform you that someone has book on date:... package:... with total price:... thank you and have a nice!" name="message">This from laravel, we glad to inform you that someone has book on date:... package:... with total price:... thank you and have a nice!</textarea></li>                                                    
+                            <li><textarea class="txtField" value="This from laravel, we glad to inform you that someone has book on date:... package:... with total price:... thank you and have a nice!" name="message">This from laravel, we glad to inform you that someone has book on date:... package:... with total price:... thank you and have a nice!</textarea></li>                            
                         </ul> 
                         <button class="subBtn" type="submit">Send</button>  
                     </form>                        
@@ -158,6 +88,41 @@
                         <li><a href="https://laracasts.com/discuss/channels/laravel/laravel-and-telegram-bot">Article</a></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sections">
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header">
+                <h1>Send message via sms</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Phone number:</li>
+                    <li><input type="text" class="field" placeholder="Ongoing development"></li>
+                    <br>
+                    <li>Text Message:</li>
+                    <li><textarea class="txtField" placeholder="Ongoing development"></textarea></li>                                                    
+                </ul> 
+                <button class="subBtn" type="submit">Send</button>                          
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Commands</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>composer require twilio/skd</li>
+                    <li><a href="https://www.youtube.com/watch?v=0c7296VxnWY&t=519s">Tutorial</a></li>
+                    <li>twilio website: <a href="https://www.twilio.com/en-us/messaging?cq_plac=&cq_net=g&cq_pos=&cq_med=&cq_plt=gp&utm_source=google&utm_medium=cpc&utm_term=twilio&utm_campaign=G_S_APAC_Brand_Brand_EN_PH_Exact&gad_source=1&gbraid=0AAAAADcHgwUgEj3vntGhw8cTcxtCWwrWC&gclid=Cj0KCQjwlMfABhCWARIsADGXdy__Xyfgc-88adAeSGeXUMUfaTpT7fXpUYGy-eyNTMbfLp25W4tRDSIaAlsdEALw_wcB">website_link</a></li>
+                    <li hidden>uname: ceroncalsena@gmail.com</li>
+                    <li hidden>pass: M@y121997</li>
+                    <li><a href="https://www.youtube.com/watch?v=SonZGuM6sqQ">Tutorial</a></li>
+                </ul>
             </div>
         </div>
     </div>

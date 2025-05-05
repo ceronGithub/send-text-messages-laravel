@@ -31,6 +31,14 @@ Route::get('/', function () {
 
 Route::post('/form-submit', function(){
     // dd(request()->all());
+    $envFile = base_path('.env');
+    $envContent = file($envFile);   
+    // dd(request());     
+    foreach ($envContent as $key => $line){   
+        $envContent[52] = "\r\n";                  
+        $envContent[53] = "TELEGRAM_BOT_TOKEN=".'"'.request()->channel.'"'. "\r\n";
+    }
+    file_put_contents($envFile, implode('', $envContent));
     Notification::route('telegram', '6696261691')->notify(new TelegramCrisNotification);
     Notification::route('telegram', '5690477490')->notify(new ExampleNotification);        
     return redirect()->back();
@@ -38,18 +46,5 @@ Route::post('/form-submit', function(){
 
 Route::get('/bookingpage', [BookingController::class, 'index'])->name('booking-page.page');
 Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creation.data');
-
-// Route::post('/mail-sent', function () {
-//     // dd(request(['email']));  
-//     // Config::set('app.mail.username' , request()->email);
-//     // Config::set('app.mail.password', request()->appsPasscode);    
-//     // Config::set('app.usernameMailing', request()->email);
-//     // Config::set('app.passwordMailing', request()->appsPasscode);
-//     // putenv("MAIL_USERNAME=request()->email");
-//     // putenv("MAIL_PASSWORD=request()->appsPasscode");    
-        
-//     Mail::to(request()->email)->send(new TrialMail(request()->all()));    
-//     return redirect()->back();
-// })->name('mail-sent.data');
 
 Route::post('/mail-sent', [MailingController::class, 'storeSMTP'])->name('mail-sent.data');

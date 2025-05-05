@@ -32,7 +32,7 @@ class MailingController extends Controller
             $envContent[34] = "MAIL_PASSWORD=" . addslashes(str_replace(' ', '', $request->appsPasscode)). "\r\n"; 
             $envContent[35] = "MAIL_ENCRYPTION=tls\r\n"; 
             $envContent[36] = "MAIL_FROM_ADDRESS=VictoriaHaven@gmail.com\r\n";
-            $envContent[37] = "MAIL_FROM_NAME=VictoriaHaven\r\n";
+            $envContent[37] = "MAIL_FROM_NAME=" .'"VictoriaHaven"' ."\r\n";
             $envContent[38] = "\r\n";
         }        
          // Write the updated .env file
