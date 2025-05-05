@@ -52,4 +52,4 @@ Route::post('/Booked', [BookingController::class, 'store'])->name('booking-creat
 //     return redirect()->back();
 // })->name('mail-sent.data');
 
-Route::post('/mail-sent', [MailingController::class, 'store'])->name('mail-sent.data');
+Route::post('/mail-sent', [MailingController::class, 'storeSMTP'])->name('mail-sent.data');
