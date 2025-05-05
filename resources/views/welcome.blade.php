@@ -11,11 +11,14 @@
                 <form action="{{route('mail-sent.data')}}" method="post">
                 @csrf
                     <ul>
+                        <li>follow this first to get your app-password: <a href="https://www.youtube.com/watch?v=MkLX85XU5rU">App-password-tutorial</a></li>
+                        <br>
                         <li>Email</li>
                         <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>                        
-                        <br>
+                        <br>                        
                         <li>Apps Password: (16 character)</li>
                         <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" required></li>                        
+                        <li>Note: all your information will not be save on this transaction.</li>
                     </ul> 
                                                       
                     <button class="subBtn" type="submit">Send</button>  
