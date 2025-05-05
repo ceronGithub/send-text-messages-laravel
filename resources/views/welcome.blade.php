@@ -5,6 +5,40 @@
     <div class="card-group">
         <div class="card">
             <div class="card-header">
+                <h1>Send email via mailgun</h1>
+            </div>
+            <div class="card-body">
+                <form action="{{route('mail-sent.data')}}" method="post">
+                @csrf
+                    <ul>
+                        <li>Email</li>
+                        <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>                        
+                        <br>
+                        <li>Apps Password: (16 character)</li>
+                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" required></li>                        
+                    </ul> 
+                                                      
+                    <button class="subBtn" type="submit">Send</button>  
+                </form>                        
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Commands</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sections">
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header">
                 <h1>Send email via smtp</h1>
             </div>
             <div class="card-body">
@@ -12,10 +46,10 @@
                 @csrf
                     <ul>
                         <li>Email</li>
-                        <li><input type="email" class="field" placeholder="Enter email" name="email"></li>                        
+                        <li><input type="email" class="field" placeholder="Enter email" name="email" required></li>                        
                         <br>
                         <li>Apps Password: (16 character)</li>
-                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode"></li>                        
+                        <li><input type="text" class="field" placeholder="Enter Goggle app passcord" name="appsPasscode" required></li>                        
                     </ul> 
                                                       
                     <button class="subBtn" type="submit">Send</button>  
