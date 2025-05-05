@@ -148,3 +148,28 @@
         </div>
     </div>
 </div>
+
+<div class="sections">
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header">
+                <h1>create a dummy index</h1>
+            </div>
+            <div class="card-body">            
+                <ul>     
+                    <li>Click the article on commands</li>               
+                </ul>        
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h1>Commands</h1>
+            </div>
+            <div class="card-body">
+                <ul>
+                <li><a href="https://stackoverflow.com/questions/25320356/can-i-have-my-github-pages-index-html-in-a-subfolder-of-the-repository">Read-this-article</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
